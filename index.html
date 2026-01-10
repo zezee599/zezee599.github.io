@@ -9,3 +9,134 @@
   <p>GitHub Pages başarıyla açıldı</p>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Zezee Manga</title>
+
+<style>
+body {
+  margin:0;
+  background:black;
+  color:white;
+  font-family:'Segoe UI', Arial, sans-serif;
+}
+
+/* ÜST BAR */
+.topbar {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px;
+  background:#111;
+}
+
+.menu-btn {
+  font-size:26px;
+  cursor:pointer;
+}
+
+.search {
+  background:#222;
+  border:none;
+  color:white;
+  padding:8px 12px;
+  border-radius:20px;
+  width:150px;
+}
+
+/* YAN MENÜ */
+.sidebar {
+  position:fixed;
+  top:0;
+  left:-250px;
+  width:250px;
+  height:100%;
+  background:#0f0f0f;
+  padding:20px;
+  transition:0.3s;
+}
+
+.sidebar a {
+  display:block;
+  color:white;
+  text-decoration:none;
+  padding:12px 0;
+  font-size:18px;
+}
+
+.sidebar a:hover {
+  color:#ff4d8d;
+}
+
+/* MANGA KART */
+.manga {
+  background:#111;
+  margin:20px;
+  padding:15px;
+  border-radius:12px;
+  text-align:center;
+}
+
+.manga img {
+  width:200px;
+  border-radius:10px;
+}
+
+button {
+  margin-top:10px;
+  background:#ff4d8d;
+  border:none;
+  color:white;
+  padding:10px 22px;
+  border-radius:25px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- YAN MENÜ -->
+<div id="sidebar" class="sidebar">
+  <a href="#">Ana Sayfa</a>
+  <a href="#">Seriler</a>
+  <a href="#">Popüler</a>
+</div>
+
+<!-- ÜST BAR -->
+<div class="topbar">
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <input class="search" type="text" placeholder="Ara..." onkeyup="searchManga(this.value)">
+</div>
+
+<!-- MANGA -->
+<div class="manga" data-name="attack on titan">
+  <img src="https://upload.wikimedia.org/wikipedia/en/6/6f/Attack_on_Titan_cover.jpg">
+  <h2>Attack on Titan</h2>
+  <button>Oku</button>
+</div>
+
+<div class="manga" data-name="death note">
+  <img src="https://upload.wikimedia.org/wikipedia/en/0/0b/Death_Note_Vol_1.jpg">
+  <h2>Death Note</h2>
+  <button>Oku</button>
+</div>
+
+<script>
+function toggleMenu() {
+  let menu = document.getElementById("sidebar");
+  menu.style.left = (menu.style.left === "0px") ? "-250px" : "0px";
+}
+
+function searchManga(text) {
+  text = text.toLowerCase();
+  document.querySelectorAll(".manga").forEach(m => {
+    let name = m.getAttribute("data-name");
+    m.style.display = name.includes(text) ? "block" : "none";
+  });
+}
+</script>
+
+</body>
+</html>
