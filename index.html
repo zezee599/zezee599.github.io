@@ -13,25 +13,35 @@
       margin: 0;
     }
 
+    h1 {
+      margin-top: 20px;
+    }
+
     .manga {
       margin-top: 30px;
     }
 
+    /* FOTOĞRAF BİRAZ DAHA BÜYÜK */
     .manga img {
-      width: 180px;
-      height: 260px;
+      width: 220px;
+      height: 320px;
       object-fit: cover;
-      border-radius: 12px;
+      border-radius: 14px;
     }
 
-    button {
-      margin-top: 10px;
+    .oku-btn {
+      margin-top: 15px;
       background: #ff4d8d;
       border: none;
       color: white;
-      padding: 10px 22px;
+      padding: 12px 30px;
       border-radius: 25px;
-      font-size: 16px;
+      font-size: 17px;
+      cursor: pointer;
+    }
+
+    .oku-btn:hover {
+      background: #ff2f7a;
     }
   </style>
 </head>
@@ -40,12 +50,15 @@
 
   <h1>selamcanim🎉</h1>
 
-  <div class="manga" data-name="do as you please">
-    <img src="IMG_7264.jpeg">
+  <div class="manga">
+    <img src="IMG_7264.jpeg" alt="Do As You Please">
     <h2>Do As You Please</h2>
-    <button>Oku</button>
+
+    <!-- OKU SAYFASINA GİDER -->
+    <a href="oku.html">
+      <button class="oku-btn">Oku</button>
+    </a>
   </div>
 
 </body>
 </html>
-
