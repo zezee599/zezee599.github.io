@@ -1,108 +1,59 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<title>Zezee Manga</title>
+  <meta charset="UTF-8">
+  <title>ZezeHub</title>
 
-<style>
-body {
-  margin: 0;
-  background: black;
-  color: white;
-  font-family: Arial, sans-serif;
-}
+  <style>
+    body {
+      background: black;
+      color: white;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
 
-/* ÜST BAR */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-  background: #111;
-}
+    h1 {
+      margin-top: 20px;
+      color: #ff4d8d;
+    }
 
-.menu {
-  font-size: 26px;
-  cursor: pointer;
-}
+    .manga {
+      margin-top: 40px;
+    }
 
-.search {
-  padding: 8px;
-  border-radius: 20px;
-  border: none;
-}
+    .manga img {
+      width: 220px;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 14px;
+    }
 
-/* MENÜ */
-.sidebar {
-  position: fixed;
-  left: -220px;
-  top: 0;
-  width: 200px;
-  height: 100%;
-  background: #111;
-  padding: 20px;
-  transition: 0.3s;
-}
-
-.sidebar a {
-  display: block;
-  color: #ff4d8d;
-  text-decoration: none;
-  margin-bottom: 15px;
-  font-size: 18px;
-}
-
-/* MANGA */
-.manga {
-  text-align: center;
-  margin-top: 30px;
-}
-
-.manga img {
-  width: 220px;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 14px;
-}
-
-.oku-btn {
-  background: #ff4d8d;
-  border: none;
-  padding: 12px 30px;
-  border-radius: 25px;
-  color: white;
-  font-size: 16px;
-  margin-top: 10px;
-  cursor: pointer;
-}
-</style>
+    .oku-btn {
+      margin-top: 15px;
+      background: #ff4d8d;
+      border: none;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      font-size: 17px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="header">
-  <div class="menu" onclick="toggleMenu()">☰</div>
-  <input class="search" type="text" placeholder="Manga ara...">
-</div>
-
-<div class="sidebar" id="sidebar">
-  <a href="#">Seriler</a>
-  <a href="#">Yeni Bölümler</a>
-  <a href="#">Hakkında</a>
-</div>
+<h1>ZezeHub</h1>
 
 <div class="manga">
   <img src="IMG_7264.jpeg">
   <h2>Do As You Please</h2>
-  <a href="oku.html"><button class="oku-btn">Oku</button></a>
-</div>
 
-<script>
-function toggleMenu() {
-  let menu = document.getElementById("sidebar");
-  menu.style.left = menu.style.left === "0px" ? "-220px" : "0px";
-}
-</script>
+  <a href="oku.html">
+    <button class="oku-btn">Oku</button>
+  </a>
+</div>
 
 </body>
 </html>
